@@ -1,0 +1,19 @@
+<div class="main">
+	<!-- news_1 S -->
+	<div class="works_content news_content">
+		<div class="hd">
+                    <h2><%= @news_content.title %></h2>
+                    <span class="send_data"><%= @news_content.updated_at %></span>
+		</div>
+		<div class="bd">
+			<div class="act_pic">
+                            <!-- <img src="pic/newspic.jpg" alt=""/> -->
+			</div>
+			<div class="work_topic">
+                            <%= raw @news_content.content %>
+			</div>
+		</div>
+		<a class="close" href="#nogo" title="返回">返回</a>
+	</div>
+	<!-- news_1 E -->
+</div>

@@ -1,0 +1,37 @@
+<div class="news_wrap">
+    <ul class="news_list" id="news_list">
+        <% for i in 1..4 do %>
+            <li class="animation">
+            <p class="time">2013年01月17日</p> 
+            <p class="tit"><a href="#nogo" target="_blank">M叁集团大肆找人，懂的入</a></p>
+            <a href="#nogo" target="_blank" title="">
+            <%= image_tag image_path("pic/newsp1.jpg"), width:"324", height:"196", alt:"" %>
+            </a>
+            <p class="txt">M叁营销传播集团，成立于2003年的合伙人公司，旗下有"M叁SHANGHAI" " M·3" "MⅢ" "M叁."，现大肆招找人，找总监、找策略、找AE、找文案、找设计，各种找各种要，钱多活少速速来。</p>
+            <a class="detail">详细内容<i></i></a>
+            </li>
+        <% end %>
+        <% @news_contents.each do |a| %>
+            <li class="animation">
+            <p class="time"><%= a.updated_at %></p> 
+            <p class="tit"><a href="#nogo" target="_blank"><%= a.title %></a></p>
+            <a href="<%= news_content_path(a) %>" target="_blank" title="">
+            <% if !a.news_pic_url.nil? %>
+                <%= image_tag a.news_pic_url, width:"324", height:"196", alt:"" %>
+            <% end %>
+            </a>
+            <p class="txt">
+                <%= a.summary %>
+            </p>
+            <a class="detail">详细内容<i></i></a>
+            </li>
+        <% end %>
+    </ul>
+</div>
+<script language="javascript">
+    //news
+    $("#news_list li").hover(function(){
+        $("#news_list li").removeClass("shake");
+        $(this).addClass("shake");
+    });
+</script>

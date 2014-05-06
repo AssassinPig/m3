@@ -1,0 +1,28 @@
+<%= form_for @about_content, url: @about_content.new_record? ? admin_about_contents_path : admin_about_content_path(@about_content), html: {class: "form-horizontal", role:"form" } do |f| %>
+  <%= render 'shared/error_messages', target: @about_content %>
+
+  <div class="form-group">
+      <div class="field">
+          <%= f.label :title %><br>
+          <%= f.text_field :title, placeholder:"输入标题", class: "form-control" %>
+      </div>
+  </div>
+
+  <div class="form-group">
+      <div class="field">
+          <%= f.label :summary%><br>
+          <%= f.text_field :summary, placeholder:"输入简介", class: "form-control" %>
+      </div>
+  </div>
+
+  <div class="form-group">
+      <div class="field">
+          <%= f.label :content %><br>
+          <%= f.kindeditor :content %>
+      </div>
+  </div>
+
+  <div class="actions">
+      <%= f.submit '保存', class: "btn btn-primary" %>
+  </div>
+<% end %>

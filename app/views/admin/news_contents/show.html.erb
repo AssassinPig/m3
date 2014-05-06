@@ -1,0 +1,26 @@
+<div class="row">
+    <div class="col-md-6 col-md-offset-2">
+        <p>
+            <h1><%= @news_content.title %></h1>
+        </p>
+
+        <hr>
+        <p>
+            <%= @news_content.summary %>
+        </p>
+
+        <hr>
+        <p>
+        <%= image_tag(@news_content.news_pic_url) if !@news_content.news_pic_url.nil? %>
+        </p>
+
+        <hr>
+        <p>
+        <%= raw @news_content.content %>
+        </p>
+
+        <hr>
+        <%= link_to '编辑', edit_admin_news_content_path(@news_content), 'data-no-turbolink' => true %>
+        <%= link_to '后退', admin_news_contents_path %>
+    </div>
+</div>

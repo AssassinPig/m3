@@ -1,0 +1,46 @@
+<%= form_for @work_content, url: @work_content.new_record? ? admin_work_contents_path : admin_work_content_path(@work_content), html: {class: "form-horizontal", role:"form"} do |f| %>
+    <%= render 'shared/error_messages', target: @work_content %>
+
+    <div class="form-group">
+        <div class="field">
+            <%= f.label :title %><br>
+            <%= f.text_field :title, placeholder:"输入标题", class:"form-control" %>
+        </div>
+    </div>
+
+    <hr>
+    <div class="form_group">
+        <div class="field">
+            <%= f.file_field :work_logo_url%>
+        </div>
+    </div>
+
+    <div class="form_group">
+        <h4>当前logo</h4>
+        <%= image_tag(@work_content.work_logo_url) if !@work_content.work_logo_url.nil? %>
+    </div>
+
+    <hr>
+    <div class="form_group">
+        <div class="field">
+            <%= f.file_field :work_pic_url%>
+        </div>
+    </div>
+
+    <div class="form_group">
+        <h4>当前图片</h4>
+        <%= image_tag(@work_content.work_pic_url) if !@work_content.work_pic_url.nil? %>
+    </div>
+
+    <hr>
+    <div class="form-group">
+        <div class="field">
+            <%= f.label :content %><br>
+            <%= f.kindeditor :content %>
+        </div>
+    </div>
+
+    <div class="actions">
+        <%= f.submit '保存', class: "btn btn-default"%>
+    </div>
+<% end %>

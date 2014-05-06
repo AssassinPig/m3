@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>M3 Admin</title>
+        <%= stylesheet_link_tag    "admin/admin", media: "all", "data-turbolinks-track" => true %>
+        <%= javascript_include_tag "admin/admin", "data-turbolinks-track" => true %>
+        <%= csrf_meta_tags %>
+    </head>
+    <body>
+        <div class="container">
+
+            <div class="header">
+                <div class="row">
+                    <div class="col-md-8">
+                        <ul class="nav nav-pills pull-right">
+                            <% if login? %>
+                                <li><%= link_to '管理首页', admin_root_path %></li>
+                                <li><%= link_to 'about页面', admin_about_contents_path %></li>
+                                <li><%= link_to 'works页面', admin_work_contents_path %></li>
+                                <li><%= link_to 'news页面', admin_news_contents_path %></li>
+                                <li><%= link_to 'jobs页面', admin_jobs_path %></li>
+                                <li><%= link_to '退出', admin_logout_path, method: :delete  %></li>
+                            <% end %>
+                        </ul>
+                        <h3 class="text_muted">M3后台</h3>
+                    </div>
+                </div>
+            </div>
+
+            <%= yield %>
+            
+            <hr>
+            <div class="footer">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="inline"><h4>M3</h4>DIGITAL MIND INNOVATION PARTNERS</div>
+                    </div>
+                    <div class="col-md-4 pull-right">
+                        沪备ICP案:xxxxxxxxxxx
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </body>
+</html>

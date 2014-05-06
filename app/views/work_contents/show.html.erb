@@ -1,0 +1,44 @@
+<div class="main">
+	<!-- works_1 S -->
+	<div class="works_content">
+		<div class="hd">
+                        <h2><%= @work_content.title %></h2>
+                        <span class="brand_logo">
+                            <!-- <img src="pic/brand_logo.png" alt=""/> -->
+                            <% if !@work_content.work_logo_url.nil? %>
+                                <%= image_tag @work_content.work_logo_url, alt:"" %>
+                            <% end %>
+                        </span>
+                    </div>
+                    <div class="bd">
+                        <!-- 
+                        <div class="work_topic">
+                            <p>点评明星第一眼印象</p>
+                            <p>借助明星人气，借助趣味玩法，强化“决胜第一眼”的记忆度</p>
+                            <p>以minisite活动为主导，媒体投放、EPR传播为手段，进行产品的推广宣传，取得惊人的效果。</p>
+                        </div>
+                        <div class="act_rule">
+                            <p>活动规则：</p>
+                            <p>紧扣产品Slogan，推出点评明星第一眼印象活动，号召网友自主上传喜爱的明星照片，</p>
+                            <p>对明星照片进行印象点评。</p>
+                            <p>点评成功后生成微博@给三位好友，以邀请更多网友对自己支持的明星进行点评。</p>
+                            <p>参与就有机会获赠活动大奖。</p>
+                        </div>
+                        <div class="act_pic">
+                            <img src="pic/b_pic1.jpg" alt=""/>
+                            <img src="pic/b_pic2.jpg" alt=""/>
+                            <img src="pic/b_pic3.jpg" alt=""/>
+                        </div>
+                        -->
+                        <div class="work_topic">
+                            <%= raw @work_content.content %>
+                        </div>
+
+                    </div>
+                    <div class="fd">
+                        <p>By<span><%= @work_content.updated_at %></span></p>
+                    </div>
+                    <a class="close" href="<%= work_contents_path %>" title="返回">返回</a>
+                </div>
+                <!-- works_1 E -->
+            </div>

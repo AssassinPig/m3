@@ -1,0 +1,59 @@
+<div class="main">
+    <!-- jobs S -->
+    <div class="jobs">
+        <div class="hd">
+            <h2>应聘职位简历投至 hr@M3AD.cn，并在邮件正文中发送标准格式简历，并标注应聘职位、期望薪资。</h2>
+        </div>
+        <div class="bd">
+
+            <% @jobs.each do |job| %>
+                <div class="j_hd">
+                    <h3><%= job.title %></h3>
+                </div>
+                <div class="j_bd">
+                    <%= raw job.content %>
+                </div>
+            <% end %>
+
+            <div class="j_hd">
+                <h3>美术指导（互动/BTL类）</h3>
+            </div>
+            <div class="j_bd">
+                <ul class="job_require">
+                    <li>3年以上大型广告公司相关工作经验，有汽车类广告工作经验优先</li>
+                    <li>良好的美术功底及创意能力</li>
+                    <li>专业、全面的执行能力,对品牌策略能以独到、精准的理解进行视觉表现；</li>
+                    <li>能胜任系统的全案工作，并能协助总监完成提案，有服务国际品牌的成功案例</li>
+                    <li>良好的沟通技巧</li>
+                </ul>
+            </div>
+            <div class="j_hd">
+                <h3>互动客户经理</h3>
+            </div>
+            <div class="j_bd">
+                <ul class="job_require">
+                    <li>本科以上学历，美术，视觉传达，工业设计相关专业。</li>
+                    <li>深厚的美术功底及优秀的创意构思能力，理解，分析能力强。对用户界面设计，交互设计相关工作有浓厚兴趣和丰富经验;</li>
+                    <li>熟悉界面设计的流程方法，出色地设计语言表达能力，优秀的创新与沟通协调能力。</li>
+                    <li>精通photoshop、illustrator、flash、dreamweaver等常用制作工具；能完成Flash动效原型设计和制作。</li>
+                    <li>熟悉3D或actionscript语言优先。</li>
+                    <li>良好的沟通与设计表达能力。富于团队精神，具有责任心，工作目标感与计划性；良好的团队协作，执行力与学习能力。</li>
+                    <li>具国际品牌社会化媒体运营经验，优秀的手绘技能者优先。</li>
+                </ul>
+            </div>
+            <div class="j_hd">
+                <h3>客户副总监</h3>
+            </div>
+            <div class="j_bd">
+                <ul class="job_require">
+                    <li>3年以上大型广告公司相关工作经验，有汽车类广告工作经验优先</li>
+                    <li>良好的美术功底及创意能力</li>
+                    <li>专业、全面的执行能力,对品牌策略能以独到、精准的理解进行视觉表现；</li>
+                    <li>能胜任系统的全案工作，并能协助总监完成提案，有服务国际品牌的成功案例</li>
+                    <li>良好的沟通技巧</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- jobs E -->
+</div>

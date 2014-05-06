@@ -1,0 +1,22 @@
+<div class="main">
+	<!-- m3介绍 S -->
+        <div class="clent_info_wrap">
+		<ul class="m3_info clent_info" id="m3_info">
+                  <li class="animation"><a href="#nogo" target="_blank" title=""><%= image_tag image_path("pic/client1.jpg"), width:"948", height:"440", alt:""%></a></li>
+		  <li class="animation"><a href="#nogo" target="_blank" title=""><%= image_tag image_path("pic/client2.jpg"), width:"948", height:"440", alt:""%></a></li>
+		  <li class="animation"><a href="#nogo" target="_blank" title=""><%= image_tag image_path("pic/client3.jpg"), width:"948", height:"440", alt:""%></a></li>
+		</ul>
+		<i class="zy zy1"></i>
+		<i class="zy zy2"></i>
+		<i class="add add1"></i>
+		<i class="add add2"></i>
+	</div>
+	<!-- m3介绍 E -->
+</div>
+<script language="javascript">
+	//m3介绍
+	$("#m3_info li").hover(function(){
+		$("#m3_info li").removeClass("shake");
+		$(this).addClass("shake");
+	});
+</script>

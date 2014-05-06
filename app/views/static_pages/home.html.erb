@@ -1,0 +1,31 @@
+<div class="main">
+    <!-- focus S -->
+    <div class="focus_box" id="focus_box">
+        <ul class="pic_list">
+            <% for i in 1..4 do %>
+                <li>
+                <a href="#nogo" title="">
+                    <%= image_tag image_path("pic/focus#{i}.jpg"), width:"948", height:"447",alt:"" %>
+                </a>
+                </li>
+            <% end %>
+        </ul>
+        <ul class="number_list">
+            <li class="on">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li class="last">4</li>
+        </ul>
+    </div>
+    <!-- focus E -->
+    <!-- m3介绍 S -->
+    <ul class="m3_info" id="m3_info">
+        <li class="animation"><a href="#nogo" target="_blank" title=""><%= image_tag image_path("pic/business1.jpg"), width:"474", height:"434",alt:"" %><span><strong>M点3创新合作者思维模型</strong><i></i></span></a></li>
+        <li class="animation"><a href="#nogo" target="_blank" title=""><%= image_tag image_path("pic/business2.jpg"), width:"474", height:"434",alt:"" %><span><strong>案例分享</strong><i></i></span></a></li>
+        <li class="animation"><a href="#nogo" target="_blank" title=""><%= image_tag image_path("pic/business3.jpg"), width:"474", height:"434",alt:"" %><span><strong>M点3的互联网价值观</strong><i></i></span></a></li>
+        <li class="animation"><a href="#nogo" target="_blank" title=""><%= image_tag image_path("pic/business4.jpg"), width:"474", height:"434",alt:"" %><span><strong>Our Team</strong><i></i></span></a></li>
+        <li class="animation"><a href="#nogo" target="_blank" title=""><%= image_tag image_path("pic/business5.jpg"), width:"474", height:"434",alt:"" %><span><strong>微信运维那点事儿</strong><i></i></span></a></li>
+        <li class="animation"><a href="#nogo" target="_blank" title=""><%= image_tag image_path("pic/business6.jpg"), width:"474", height:"434",alt:"" %><span><strong>M点3人才需求</strong><i></i></span></a></li>
+    </ul>
+    <!-- m3介绍 E -->
+</div>
